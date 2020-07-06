@@ -6,6 +6,7 @@ import IndexLayout from '../layouts'
 import styled from '@emotion/styled'
 import Card from '../components/Card'
 import StyledContainer from '../components/StyledContainer'
+import SEO from '../components/SEO'
 
 
 const BlogContent = styled.div`
@@ -36,6 +37,7 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Page>
+      <SEO title={data.markdownRemark.frontmatter.title} description={data.markdownRemark.excerpt} />
       <StyledContainer>
         <Card card={data.markdownRemark}>
           {/* eslint-disable-next-line react/no-danger */}

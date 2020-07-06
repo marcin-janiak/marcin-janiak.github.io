@@ -4,7 +4,7 @@ module.exports = {
   pathPrefix: "/website",
   siteMetadata: {
     title: 'Marcin Janiak',
-    description: 'Some coding blog.',
+    description: 'Yet another coding blog.',
     keywords: 'C#, csharp, dotnet, graphql, hotchocolate, aspnetcore',
     siteUrl: 'http://marcin-janiak.github.io/',
     author: {
@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+        siteUrl: 'http://marcin-janiak.github.io/'
       }
     },
     'gatsby-plugin-emotion',

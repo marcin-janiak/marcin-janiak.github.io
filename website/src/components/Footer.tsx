@@ -75,8 +75,8 @@ const Footer: React.FC<PageProps> = ({ children, className }) => {
   return <StyledFooter className={className}>
     <FooterContainer>
       <LinksContainer>
-        <a target="_blank" href="https://github.com/marcin-janiak"><Github />Github</a>
-        <a target="_blank" href="https://www.linkedin.com/in/marcin-janiak/"><Linkedin />Linkedin</a>
+        <a target="_blank" rel="noreferrer" href="https://github.com/marcin-janiak"><Github />Github</a>
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/marcin-janiak/"><Linkedin />Linkedin</a>
 
       </LinksContainer>
 
