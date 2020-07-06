@@ -7,6 +7,8 @@ import IndexLayout from '../layouts'
 import StyledContainer from '../components/StyledContainer'
 import styled from "@emotion/styled";
 import { colors } from '../styles/variables'
+import { StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 
 const StyledForm = styled.form`
 display: flex;
@@ -80,30 +82,51 @@ textarea {
 
 `;
 
+interface StaticQueryProps {
+  site: {
+    siteMetadata: {
+      siteUrl: String
+    }
+  }
+}
+
 const Contact = () => (
   <IndexLayout>
     <Page>
       <StyledContainer>
-        <StyledForm action="https://formsubmit.co/3d0d037baad0b3ccb16b5cca4f6f6b7e"
-          method="POST">
-          <StyledLabel>
-            Email (required):
+        <StaticQuery
+          query={graphql`
+      query GetSiteUrl {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `}
+          render={(data: StaticQueryProps) => (
+            <StyledForm action="https://formsubmit.co/3d0d037baad0b3ccb16b5cca4f6f6b7e"
+              method="POST">
+              <StyledLabel>
+                Email (required):
           <input type="email" name="email" required />
-          </StyledLabel>
-          <StyledLabel>
-            Name (required):
+              </StyledLabel>
+              <StyledLabel>
+                Name (required):
           <input type="text" name="name" required />
-          </StyledLabel>
-          <StyledLabel>
-            Subject (required):
-          <input type="text" name="subject" required />
-          </StyledLabel>
-          <StyledLabel>
-            Content (required):
+              </StyledLabel>
+              <StyledLabel>
+                Subject (required):
+          <input type="text" name="_subject" required />
+              </StyledLabel>
+              <StyledLabel>
+                Content (required):
           <textarea name="content" required />
-          </StyledLabel>
-          <button type="submit" className="darkeningButton">Send</button>
-        </StyledForm>
+              </StyledLabel>
+              <input type="hidden" name="_next" value={`${data.site.siteMetadata.siteUrl}/thanks`} />
+              <input type="text" name="_honey" style={{ display: "none" }} />
+              <button type="submit" className="darkeningButton">Send</button>
+            </StyledForm>)} />
       </StyledContainer>
     </Page>
   </IndexLayout>
