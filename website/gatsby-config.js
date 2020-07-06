@@ -1,14 +1,15 @@
 'use strict'
 
 module.exports = {
+  pathPrefix: "/website",
   siteMetadata: {
     title: 'Marcin Janiak',
-    description: 'Some coding.',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    description: 'Some coding blog.',
+    keywords: 'C#, csharp, dotnet, graphql, hotchocolate, aspnetcore',
+    siteUrl: 'http://marcin-janiak.github.io/',
     author: {
       name: 'Marcin Janiak',
-      url: 'https://twitter.com/resir014',
+      url: '',
       email: ''
     }
   },
