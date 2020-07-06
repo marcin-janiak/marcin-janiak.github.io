@@ -21,9 +21,10 @@ margin: 0rem -2rem!important;
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
 
+  padding-left: 3em;
 
   @media (max-width: 768px) {
-    padding-left: 1.8em;
+    padding-left: 0rem;
     }
 }
 
@@ -41,6 +42,10 @@ margin: 0rem -2rem!important;
 }
 .gatsby-highlight pre[class*="language-"] {
   margin: 0;
+  @media (max-width: 768px) {
+  margin: 0;
+    }
+
 }
 
 .gatsby-highlight pre[class*="language-"]::before {
