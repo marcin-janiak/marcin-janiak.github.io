@@ -51,6 +51,7 @@ const StyledFooter = styled.footer`
   background-color:${colors.ui.light};
   display:flex;
   flex-direction:row;
+  flex-wrap: wrap;
 `
 
 const FooterContainer = styled(Container)`

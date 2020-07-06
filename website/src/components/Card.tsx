@@ -11,14 +11,7 @@ background-color: ${colors.ui.whisper};
 border-radius: .4rem;
 overflow: hidden;
 box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
-margin: 5rem 0rem;
-
-// //Move higher
-// &:hover {
-//   transform: translateY(-.5%);
-//   background-color: ${colors.ui.light};
-//   box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
-// }
+margin: 5rem 0rem .3rem 0rem;
 `
 
 
@@ -32,7 +25,11 @@ picture>img {
 `;
 
 const StyledTitle = styled.h1`
-font-size: 3rem;
+@media (max-width: 768px) {
+font-size: 1.5rem;
+}
+
+font-size: 2.5rem;
 font-weight: 500;
 transition: .3s all;
 color: ${colors.brand};
@@ -43,11 +40,14 @@ color: ${colors.black};
 display: flex;
 justify-content: flex-end;
 font-weight:400;
-
 `;
 
 const InnerCard = styled.div`
 padding: 2rem;
+
+@media (max-width: 768px) {
+  padding: 1rem;
+  }
 `;
 
 
@@ -70,6 +70,7 @@ cursor: pointer;
 `;
 
 const Tags = styled.div`
+flex-flow: wrap;
 padding-bottom: 2rem;
 display: flex;
 

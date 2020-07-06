@@ -12,29 +12,37 @@ margin: 0rem -2rem!important;
   border-left: 0.25em solid #f99;
 }
 
- .gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*="language-"] {
   margin: 0;
   padding: 0;
-  overflow: initial;
-  float: left; /* 1 */
+
   min-width: 100%; /* 2 */
 }
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
-  padding-left: 2.8em;
+
+
+  @media (max-width: 768px) {
+    padding-left: 1.8em;
+    }
 }
 
 .line-numbers-rows {
   padding-left: .5rem;
+  @media (max-width: 768px) {
+  display: none;
+  }
+
 }
 
 .gatsby-highlight {
   position: relative;
-  -webkit-overflow-scrolling: touch;
+  overflow: initial;
 }
 .gatsby-highlight pre[class*="language-"] {
-  -webkit-overflow-scrolling: touch;
+  margin: 0;
 }
+
 .gatsby-highlight pre[class*="language-"]::before {
   background: black;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -44,7 +52,6 @@ margin: 0rem -2rem!important;
   padding: 0.1rem 0.5rem;
   position: absolute;
   right: 1rem;
-  text-align: right;
   text-transform: uppercase;
   top: 0;
 }
