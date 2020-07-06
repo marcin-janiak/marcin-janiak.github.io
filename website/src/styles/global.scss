@@ -1,0 +1,66 @@
+.gatsby-highlight {
+margin: 0rem -2rem!important;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+ .gatsby-highlight pre[class*="language-"] {
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+.line-numbers-rows {
+  padding-left: .5rem;
+}
+
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.gatsby-highlight pre[class*="language-csharp"]::before {
+  content: "C#";
+  background: #f7df1e;
+  color: black;
+}
+
+.BlogContent > p{
+font-size: 1.2rem;
+line-height: 1.7;
+}
+
+.darkeningButton {
+  transition-property: background-color;
+  transition: .3s all;
+}
